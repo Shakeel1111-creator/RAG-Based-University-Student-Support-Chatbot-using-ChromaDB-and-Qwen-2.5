@@ -145,42 +145,7 @@ to be eligible for semester examinations.
 ```text
 Students must maintain at least 75% attendance
 to be eligible for semester examinations.
-```
-
-## Installation and Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/university-student-support-ai-assistant.git
-```
-
-```bash
-cd university-student-support-ai-assistant
-```
-
-Replace `YOUR_USERNAME` with your GitHub username.
-
-### 2. Install Dependencies
-
-```bash
-pip install torch accelerate transformers sentence-transformers chromadb
-```
-
-### 3. Run the Project
-
-Open the project notebook in Google Colab or Jupyter Notebook.
-
-Execute the notebook cells in order to:
-
-1. Load the models.
-2. Prepare university documents.
-3. Generate chunks and embeddings.
-4. Store data in ChromaDB.
-5. Retrieve relevant information.
-6. Generate answers using Qwen 2.5.
-
-The Hugging Face models are downloaded automatically when first loaded. An internet connection is required for the initial download.
+``
 
 ## Sample Questions
 
@@ -198,27 +163,6 @@ How do I download my hall ticket?
 What is the hostel fee?
 ```
 
-The assistant should provide answers when the information is available in the knowledge base. For unsupported questions, it is instructed to respond that it does not have enough information.
-
-## Current Limitations
-
-- Uses a small sample university knowledge base.
-- Uses character-based chunking.
-- ChromaDB is configured for in-memory storage.
-- The current implementation does not include a graphical user interface.
-- The LLM may still generate inaccurate information despite context-based instructions.
-- Retrieval relevance thresholding and RAG evaluation are not yet implemented.
-
-## Future Enhancements
-
-- Add PDF and DOCX document ingestion.
-- Implement sentence-aware or recursive chunking.
-- Add source citations to generated answers.
-- Implement retrieval relevance thresholding.
-- Evaluate retrieval and answer quality.
-- Develop a Streamlit chat interface.
-- Add persistent ChromaDB storage.
-- Deploy the application as a web-based student support assistant.
 
 ## Learning Outcomes
 
